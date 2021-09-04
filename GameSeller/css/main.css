@@ -1,0 +1,49 @@
+﻿html{
+    height: 100%;
+}
+body {
+    color: #fff;
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #000 80%, #7c0000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.btn-black {
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+}
+
+    .btn-black:hover,
+    .btn-black:focus, .btn-black.focus {
+        color: #fff;
+        background-color: #000;
+        box-shadow: 0 0 5px 0.25rem rgb(255, 255, 255, 0.5);
+    }
+
+    .btn-black.disabled, .btn-black:disabled {
+        box-shadow: none;
+    }
+
+    .btn-black:not(:disabled):not(.disabled):active, .btn-black:not(:disabled):not(.disabled).active,
+    .show > .btn-black.dropdown-toggle {
+        color: #fff;
+        background-color: #000;
+        background-image: linear-gradient(to bottom, #000, #ff0000);
+    }
+
+.bg-black {
+    background-color: #000;
+}
+
+.form-control, .form-control:focus {
+    color: gray;
+    background-color: rgb(50,50,50);
+    border: 0;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

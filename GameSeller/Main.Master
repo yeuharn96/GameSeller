@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="GameSeller.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/assets/bootstrap-4.6.0-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/bootstrap-4.6.0-dist/css/bootstrap-grid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="/css/slick.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .navbar-brand.logo {
+            font-family: 'Comic Sans MS';
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+            .nav-link:hover {
+                color: lightgray;
+            }
+
+        .search-box:focus {
+            outline: 0;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="cpHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav class="navbar sticky-top navbar-expand-sm bg-black">
+            <a class="navbar-brand logo" href="/Page/Home.aspx">GS</a>
+
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#nav-header">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div id="nav-header" class="collapse navbar-collapse">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Browse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                    <li class="nav-item ml-auto d-none d-sm-block">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="cpBody" runat="server"></asp:ContentPlaceHolder>
+
+
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+            crossorigin="anonymous"></script>
+        <script src="/assets/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+        <script src="/assets/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script type="text/javascript">
+            const Util = {
+                redirect: function (path, params) {
+                    let queryString = '';
+                    Object.keys(params).forEach(p => queryString += `${p}=${encodeURIComponent(params[p])}&`);
+
+                    //console.log(`${path}?${queryString}`);
+                    window.location = `${path}?${queryString.slice(0,-1)}`;
+                }
+            }
+        </script>
+
+        <asp:ContentPlaceHolder ID="cpJs" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
